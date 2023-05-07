@@ -3,6 +3,7 @@ import { CartProvider } from 'use-shopping-cart';
 
 const Cart = ({ children }: { children: ReactNode }) => (
     <CartProvider
+        
         shouldPersist={true}
         cartMode="checkout-session"
         stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!} // this isn't actually being used for Stripe Checkout
