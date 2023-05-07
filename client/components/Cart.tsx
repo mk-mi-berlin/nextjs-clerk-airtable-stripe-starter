@@ -6,6 +6,7 @@ const Cart = ({ children }: { children: ReactNode }) => (
         cartMode="checkout-session"
         stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!} // this isn't actually being used for Stripe Checkout
         currency={process.env.NEXT_PUBLIC_CURRENCY!}
+        shouldPersist={true}
     >
         <>{children}</>
     </CartProvider>
